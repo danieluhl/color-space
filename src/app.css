@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply text-4xl px-4 py-2 border-b border-b-blue-400;
+	}
+	h2 {
+		@apply text-3xl;
+	}
+	h3 {
+		@apply text-2xl;
+	}
+	section {
+		@apply w-screen h-screen border-4 text-xl overflow-hidden;
+	}
+	article {
+		@apply p-2;
+	}
+	ul {
+		@apply list-disc pl-6;
+	}
+	em {
+		@apply text-pink-500;
+	}
+	code {
+		@apply bg-zinc-900 text-orange-400 px-2 py-1 text-lg rounded;
+	}
+}
