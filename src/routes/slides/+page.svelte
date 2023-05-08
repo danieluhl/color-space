@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	const nextSlide = () => {
-		const slideNum = Math.floor(window.scrollY / window.innerHeight);
+		const slideNum = Math.round(window.scrollY / window.innerHeight);
 		console.log(slideNum);
 		window.scrollTo({
 			top: (slideNum + 1) * window.innerHeight
 		});
 	};
 	const prevSlide = () => {
-		const slideNum = Math.floor(window.scrollY / window.innerHeight);
+		const slideNum = Math.round(window.scrollY / window.innerHeight);
 		console.log(slideNum);
 		window.scrollTo({ top: (slideNum - 1) * window.innerHeight });
 	};
@@ -294,7 +294,6 @@ border-blue-500"
 				<a href="https://codepen.io">CodePen</a>.</span
 			>
 		</p>
-		<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 	</section>
 
 	<section class="h-screen flex items-center justify-center border-green-500">
@@ -331,7 +330,6 @@ border-blue-500"
 				<a href="https://codepen.io">CodePen</a>.</span
 			>
 		</p>
-		<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 	</section>
 
 	<section class="border-blue-500">
@@ -427,8 +425,8 @@ border-blue-500"
 
 	<section class="border-blue-500">
 		<h1>XYZ, XYZ-d50, XYZ-d65</h1>
-		<article class="flex gap-8">
-			<ul>
+		<article class="flex gap-8 flex-nowrap">
+			<ul class="w-1/2">
 				<li>Optimized for humans/machines - most human perceptable colors</li>
 				<li>d50 and d65 refer to the white point</li>
 				<li>White point is where "true white" exists in the space</li>
@@ -437,6 +435,14 @@ border-blue-500"
 					When converting colors, you want white point to match so the "warmness" is not changed
 				</li>
 			</ul>
+			<div class="w-1/2">
+				<p class="mb-4">
+					White is measured in kelvin because old light bulbs with filaments had a direct connection
+					between the heat used and the white value output
+				</p>
+
+				<img src="bulb.png" alt="most popular color formats" />
+			</div>
 		</article>
 	</section>
 
