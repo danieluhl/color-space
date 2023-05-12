@@ -488,8 +488,9 @@ border-blue-500"
 
 	<section class="border-purple-500">
 		<h1>Color 5 Custom Spaces</h1>
-		<article class="flex gap-8">
+		<article class="flex gap-8 flex-col">
 			<p>Outlines file format <code>.icc</code> for providing your own custom color space!</p>
+			<small>(someone please make a `th` color space 😂)</small>
 		</article>
 	</section>
 
